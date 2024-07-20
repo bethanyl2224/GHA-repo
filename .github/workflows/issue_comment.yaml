@@ -28,7 +28,8 @@ jobs:
     steps:
       - name: Create comment API
         run: |
-          gh api -X POST \
+          gh api --method POST \
+            -H "Accept: application/vnd.github+json" \
             http://api.github.com/repo/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
             -f body='
             Comment bot from API call not action'
