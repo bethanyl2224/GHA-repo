@@ -3,7 +3,7 @@ name: Create a comment on new issues
 on:
   issues:
     types: [opened]
-permissions: write
+permissions: write-all
       
 jobs:
   comment-with-action:
